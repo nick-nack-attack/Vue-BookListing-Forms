@@ -29,7 +29,7 @@ export default {
       title: "All Books",
       states: ["Want to Read", "Read", "Reading"],
       filters: ["bought", "borrowed"],
-      holding: ["bought"],
+      holding: "bought",
       books: [
         { title: "Self-Reliance", author: "Ralph Waldo Emerson", finishedReading: true, ownership: "borrowed", },
         { title: "American Gods", author: "Neil Gaiman", finishedReading: false, ownership: "bought", },
@@ -37,12 +37,14 @@ export default {
       ]
     };
   },
-  filteredBooks() {
-    return _.filter(this.books, ["ownership", this.holding]);
-  },
   components: {
     BookItem,
     BookForm,
+  },
+  computed: {
+    filteredBooks() {
+      return _.filter(this.books, ["ownership", this.holding]);
+    }
   },
   methods: {
     appendBook(bookData) {
