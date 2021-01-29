@@ -53,13 +53,13 @@
 
 <script>
 export default {
-  name: "BookForm",
-  props: ["books"],
+  name: 'BookForm',
+  props: ['books'],
   data() {
     return {
       bookData: {
-        bookTitle: "",
-        bookAuthor: "",
+        bookTitle: '',
+        bookAuthor: '',
         finishedReading: false,
         ownership: [],
       }
@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     bookSubmit(bookData) {
-      this.$emit("addBook", bookData);
+      this.$emit('addBook', bookData);
     }
   }
 };
