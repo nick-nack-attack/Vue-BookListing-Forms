@@ -19,24 +19,18 @@
       value=""
       placeholder="Book Author"
     >
-    <label for="finishedReading">
-      Finished Reading
-    </label>
+    <label for="finishedReading">Finished Reading</label>
     <input
       v-model="bookData.finishedReading"
       type="checkbox"
     >
-    <label for="borrowed">
-      borrowed
-    </label>
+    <label for="borrowed">borrowed</label>
     <input
       v-model="bookData.ownership"
       type="radio"
       value="borrowed"
     >
-    <label for="bought">
-      bought
-    </label>
+    <label for="bought">bought</label>
     <input
       v-model="bookData.ownership"
       type="radio"
@@ -74,7 +68,4 @@ export default {
 </script>
 
 <style>
-form {
-  display: inline-grid;
-}
 </style>
